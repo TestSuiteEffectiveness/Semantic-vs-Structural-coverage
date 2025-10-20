@@ -92,56 +92,80 @@ F-score = 2 * (Precision * Recall) / (Precision + Recall)
 semantic-vs-structural-coverage/
 │
 ├── Data/
-│ ├── code_coverage/
-│ │ ├── Branch.txt
-│ │ ├── InstructionStat.txt
-│ │ ├── Line.txt
-│ │ └── RMS.txt
-│ │
-│ ├── GraphsInputTotal_Partial_StrictInclusion/
-│ │ ├── PR4.txt
-│ │ ├── TR4.txt
-│ │ ├── PR6.txt
-│ │ ├── TR6.txt
-│ │ ├── PR7.txt
-│ │ └── TR7.txt
-│ │
-│ ├── Mutants_LittleDarwin/
-│ │ ├── M125.txt
-│ │ ├── M126.txt
-│ │ ├── ...
-│ │ └── M248.txt
-│ │
-│ └── SemanticCoverageOutput/
-│ ├── Union_partial_R4.txt
-│ ├── Union_total_R4.txt
-│ ├── Union_partial_R6.txt
-│ ├── Union_total_R6.txt
-│ ├── Union_partial_R7.txt
-│ └── Union_total_R7.txt
+│   ├── code_coverage/
+│   │   ├── Branch.txt
+│   │   ├── InstructionStat.txt
+│   │   ├── Line.txt
+│   │   └── RMS.txt
+│   │
+│   ├── GraphsInputTotal_Partial_StrictInclusion/
+│   │   ├── PR4.txt
+│   │   ├── TR4.txt
+│   │   ├── PR6.txt
+│   │   ├── TR6.txt
+│   │   ├── PR7.txt
+│   │   └── TR7.txt
+│   │
+│   ├── Mutants_LittleDarwin/
+│   │   ├── M125.txt
+│   │   ├── M126.txt
+│   │   ├── ...
+│   │   └── M248.txt
+│   │
+│   └── SemanticCoverageOutput/
+│       ├── Union_partial_R4.txt
+│       ├── Union_total_R4.txt
+│       ├── Union_partial_R6.txt
+│       ├── Union_total_R6.txt
+│       ├── Union_partial_R7.txt
+│       └── Union_total_R7.txt
+│
+├── TestClasses/
+│   ├── FastMathTestT0.java
+│   ├── FastMathTestT1.java
+│   ├── FastMathTestT2.java
+│   ├── FastMathTestT3.java
+│   ├── FastMathTestT4.java
+│   ├── FastMathTestT5.java
+│   ├── FastMathTestT6.java
+│   ├── FastMathTestT7.java
+│   ├── FastMathTestT8.java
+│   ├── FastMathTestT9.java
+│   ├── FastMathTestT10.java
+│   ├── FastMathTestT11.java
+│   ├── FastMathTestT12.java
+│   ├── FastMathTestT13.java
+│   ├── FastMathTestT14.java
+│   ├── FastMathTestT15.java
+│   ├── FastMathTestT16.java
+│   ├── FastMathTestT17.java
+│   ├── FastMathTestT18.java
+│   ├── FastMathTestT19.java
+│   └── FastMathTestT20.java
 │
 ├── Scripts/
-│ ├── A_GenerateRandomTestSuites.py
-│ ├── B_FindOutputMutanta.py
-│ ├── C_GetKilledMutant.py
-│ ├── D_ComputeKilledMutantsByEveryTi.py
-│ ├── E_SemPartial.py
-│ ├── F_SemTotal.py
-│ ├── G_ExtractStrictInclusion.py
-│ └── H_Compute_Metrics.py
+│   ├── A_GenerateRandomTestSuites.py
+│   ├── B_FindOutputMutanta.py
+│   ├── C_GetKilledMutant.py
+│   ├── D_ComputeKilledMutantsByEveryTi.py
+│   ├── E_SemPartial.py
+│   ├── F_SemTotal.py
+│   ├── G_ExtractStrictInclusion.py
+│   └── H_Compute_Metrics.py
 │
 ├── Specification/
-│ ├── R4.txt
-│ ├── R6.txt
-│ └── R7.txt
+│   ├── R4.txt
+│   ├── R6.txt
+│   └── R7.txt
 │
 ├── src/
-│ ├── main/java/org/apache/commons/math3/util/FastMathAA.java
-│ └── test/java/org/apache/commons/math3/util/FastMathTest.java
+│   ├── main/java/org/apache/commons/math3/util/FastMathAA.java
+│   └── test/java/org/apache/commons/math3/util/FastMathTest.java
 │
 ├── Results.xlsx
 ├── README.md
 └── LICENSE
+
 ```
 
 ## 📈 Results Summary
