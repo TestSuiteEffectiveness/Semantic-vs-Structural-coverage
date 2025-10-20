@@ -30,11 +30,12 @@ Java version: 1.8.0_144, vendor: Oracle Corporation
 Default locale: en_US, platform encoding: Cp1252
 JUnit Version: 4.x (used for all test classes)
 
-Repository-specific Maven configurations:
+**Repository-specific Maven configurations:**
 
 pomJacoco.xml – configuration for JaCoCo code coverage
 
 pomPitest.xml – configuration for PIT mutation testing
+
 ### Function Under Test
 - Original function: `FastMath.tanh()` from **Apache Commons Math 3.6.1**  
 - Modified version: `FastMathAA.tanhA()` — introduces controlled divergences (throws exceptions) for certain inputs.
@@ -57,7 +58,7 @@ pomPitest.xml – configuration for PIT mutation testing
 ### 1. Structural Coverage
 - **Tools:** 
   - [JaCoCo](https://www.jacoco.org/jacoco/) integrated via `pom.xml`  
-  - [PiTest](https://pitest.org/) for **line coverage**  
+  - [PiTest](https://pitest.org/) for **line coverage**  integrated via pom.xml 
 - **Metrics:** Instruction coverage, Branch coverage, Line coverage  
 - **Output files:**  
   - `code_coverage/Branch.txt`  
