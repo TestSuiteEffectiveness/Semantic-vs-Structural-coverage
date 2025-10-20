@@ -55,12 +55,14 @@ pomPitest.xml – configuration for PIT mutation testing
 ## 🧪 Coverage Analysis
 
 ### 1. Structural Coverage
-- **Tool:** [JaCoCo](https://www.jacoco.org/jacoco/) integrated via `pom.xml`  
+- **Tools:** 
+  - [JaCoCo](https://www.jacoco.org/jacoco/) integrated via `pom.xml`  
+  - [PiTest](https://pitest.org/) for **line coverage**  
 - **Metrics:** Instruction coverage, Branch coverage, Line coverage  
 - **Output files:**  
   - `code_coverage/Branch.txt`  
   - `code_coverage/InstructionStat.txt`  
-  - `code_coverage/Line.txt`
+  - `code_coverage/LineCoverage.txt` (from PiTest)  
 
 ### 2. Mutation Coverage
 - **Tool:** [LittleDarwin](https://github.com/alipour/littledarwin)  
@@ -69,6 +71,7 @@ pomPitest.xml – configuration for PIT mutation testing
   - `B_FindOutputMutanta.py`
   - `C_GetKilledMutant.py`
   - `D_ComputeKilledMutantsByEveryTi.py`
+`
 - **Output:** `RMS.txt` = Killed/Total mutants per test class
 
 ---
@@ -215,26 +218,23 @@ This project uses a dual-license structure:
 © 2025 Anonymous. All rights reserved where applicable.
 
 ---
-
-##📝 Brief Usage Instructions
+**📝 Brief Usage Instructions**
 
 Install Java 1.8 and Maven 3.9.5 on your system.
 
-Run code coverage:
+**Run code coverage**:
 
 mvn test -Dtest="FastMathTest"
 
 
-Run mutation testing/ Pitest:
+**Run mutation testing/ Pitest:**
 
 
 mvn test-compile org.pitest:pitest-maven:mutationCoverage
 
-Run mutation testing/ LittleDarwin :
+**Run mutation testing/ LittleDarwin:**
 
 py -m littledarwin -m -b -p src\main\java -t . -c "mvn,clean,test" --timeout=600
-
-
 
 
 ## 💬 Citation
