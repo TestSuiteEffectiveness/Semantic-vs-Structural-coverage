@@ -112,36 +112,36 @@ semantic-vs-structural-coverage/
 │   │   ├── ...
 │   │   └── M248.txt
 │   │
-│   └── SemanticCoverageOutput/
-│       ├── Union_partial_R4.txt
-│       ├── Union_total_R4.txt
-│       ├── Union_partial_R6.txt
-│       ├── Union_total_R6.txt
-│       ├── Union_partial_R7.txt
-│       └── Union_total_R7.txt
-│
-├── TestClasses/
-│   ├── FastMathTestT0.java
-│   ├── FastMathTestT1.java
-│   ├── FastMathTestT2.java
-│   ├── FastMathTestT3.java
-│   ├── FastMathTestT4.java
-│   ├── FastMathTestT5.java
-│   ├── FastMathTestT6.java
-│   ├── FastMathTestT7.java
-│   ├── FastMathTestT8.java
-│   ├── FastMathTestT9.java
-│   ├── FastMathTestT10.java
-│   ├── FastMathTestT11.java
-│   ├── FastMathTestT12.java
-│   ├── FastMathTestT13.java
-│   ├── FastMathTestT14.java
-│   ├── FastMathTestT15.java
-│   ├── FastMathTestT16.java
-│   ├── FastMathTestT17.java
-│   ├── FastMathTestT18.java
-│   ├── FastMathTestT19.java
-│   └── FastMathTestT20.java
+│   ├── SemanticCoverageOutput/
+│   │   ├── Union_partial_R4.txt
+│   │   ├── Union_total_R4.txt
+│   │   ├── Union_partial_R6.txt
+│   │   ├── Union_total_R6.txt
+│   │   ├── Union_partial_R7.txt
+│   │   └── Union_total_R7.txt
+│   │
+│   └── Test_Classes/
+│       ├── FastMathTestT0.java
+│       ├── FastMathTestT1.java
+│       ├── FastMathTestT2.java
+│       ├── FastMathTestT3.java
+│       ├── FastMathTestT4.java
+│       ├── FastMathTestT5.java
+│       ├── FastMathTestT6.java
+│       ├── FastMathTestT7.java
+│       ├── FastMathTestT8.java
+│       ├── FastMathTestT9.java
+│       ├── FastMathTestT10.java
+│       ├── FastMathTestT11.java
+│       ├── FastMathTestT12.java
+│       ├── FastMathTestT13.java
+│       ├── FastMathTestT14.java
+│       ├── FastMathTestT15.java
+│       ├── FastMathTestT16.java
+│       ├── FastMathTestT17.java
+│       ├── FastMathTestT18.java
+│       ├── FastMathTestT19.java
+│       └── FastMathTestT20.java
 │
 ├── Scripts/
 │   ├── A_GenerateRandomTestSuites.py
@@ -154,6 +154,7 @@ semantic-vs-structural-coverage/
 │   └── H_Compute_Metrics.py
 │
 ├── Specification/
+│   ├── R0.txt
 │   ├── R4.txt
 │   ├── R6.txt
 │   └── R7.txt
