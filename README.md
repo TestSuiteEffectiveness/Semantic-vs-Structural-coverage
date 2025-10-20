@@ -88,7 +88,7 @@ Jaccard = |FC ∩ CM| / (|FC| + |CM| - |FC ∩ CM|)
 F-score = 2 * (Precision * Recall) / (Precision + Recall)
 
 ## 📂 Repository Structure
-
+---
 semantic-vs-structural-coverage/
 │
 ├── Data/
