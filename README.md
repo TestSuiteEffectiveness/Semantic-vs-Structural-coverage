@@ -12,8 +12,29 @@ The goal is to evaluate how well traditional structural metrics capture the sema
 
 ---
 
-## ⚙️ Experimental Setup
 
+## ⚙️ System / Environment Setup
+
+The following environment was used to develop and run the experiments:
+
+- **Operating System:** Windows 10 (64-bit)
+- **Java Version:** 1.8.0_144 (Oracle Corporation)
+  ```text
+  java version "1.8.0_144"
+  Java(TM) SE Runtime Environment (build 1.8.0_144-b01)
+  Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+Maven Version: 3.9.5
+Apache Maven 3.9.5 (57804ffe001d7215b5e7bcb531cf83df38f93546)
+Maven home: C:\Program Files\apache-maven-3.9.5
+Java version: 1.8.0_144, vendor: Oracle Corporation
+Default locale: en_US, platform encoding: Cp1252
+JUnit Version: 4.x (used for all test classes)
+
+Repository-specific Maven configurations:
+
+pomJacoco.xml – configuration for JaCoCo code coverage
+
+pomPitest.xml – configuration for PIT mutation testing
 ### Function Under Test
 - Original function: `FastMath.tanh()` from **Apache Commons Math 3.6.1**  
 - Modified version: `FastMathAA.tanhA()` — introduces controlled divergences (throws exceptions) for certain inputs.
@@ -120,28 +141,30 @@ semantic-vs-structural-coverage/
 │   │   ├── Union_partial_R7.txt
 │   │   └── Union_total_R7.txt
 │   │
-│   └── Test_Classes/
-│       ├── FastMathTestT0.java
-│       ├── FastMathTestT1.java
-│       ├── FastMathTestT2.java
-│       ├── FastMathTestT3.java
-│       ├── FastMathTestT4.java
-│       ├── FastMathTestT5.java
-│       ├── FastMathTestT6.java
-│       ├── FastMathTestT7.java
-│       ├── FastMathTestT8.java
-│       ├── FastMathTestT9.java
-│       ├── FastMathTestT10.java
-│       ├── FastMathTestT11.java
-│       ├── FastMathTestT12.java
-│       ├── FastMathTestT13.java
-│       ├── FastMathTestT14.java
-│       ├── FastMathTestT15.java
-│       ├── FastMathTestT16.java
-│       ├── FastMathTestT17.java
-│       ├── FastMathTestT18.java
-│       ├── FastMathTestT19.java
-│       └── FastMathTestT20.java
+│   ├── Test_Classes/
+│   │   ├── FastMathTestT0.java
+│   │   ├── FastMathTestT1.java
+│   │   ├── FastMathTestT2.java
+│   │   ├── FastMathTestT3.java
+│   │   ├── FastMathTestT4.java
+│   │   ├── FastMathTestT5.java
+│   │   ├── FastMathTestT6.java
+│   │   ├── FastMathTestT7.java
+│   │   ├── FastMathTestT8.java
+│   │   ├── FastMathTestT9.java
+│   │   ├── FastMathTestT10.java
+│   │   ├── FastMathTestT11.java
+│   │   ├── FastMathTestT12.java
+│   │   ├── FastMathTestT13.java
+│   │   ├── FastMathTestT14.java
+│   │   ├── FastMathTestT15.java
+│   │   ├── FastMathTestT16.java
+│   │   ├── FastMathTestT17.java
+│   │   ├── FastMathTestT18.java
+│   │   ├── FastMathTestT19.java
+│   │   └── FastMathTestT20.java
+│   │
+│   └── SubsetTestsT1_T20.txt
 │
 ├── Scripts/
 │   ├── A_GenerateRandomTestSuites.py
@@ -165,7 +188,10 @@ semantic-vs-structural-coverage/
 │
 ├── Results.xlsx
 ├── README.md
-└── LICENSE
+├── LICENSE
+├── pomJacoco.xml
+└── pomPitest.xml
+
 
 
 ```
@@ -189,6 +215,27 @@ This project uses a dual-license structure:
 © 2025 Anonymous. All rights reserved where applicable.
 
 ---
+
+##📝 Brief Usage Instructions
+
+Install Java 1.8 and Maven 3.9.5 on your system.
+
+Run code coverage:
+
+mvn test -Dtest="FastMathTest"
+
+
+Run mutation testing/ Pitest:
+
+
+mvn test-compile org.pitest:pitest-maven:mutationCoverage
+
+Run mutation testing/ LittleDarwin :
+
+py -m littledarwin -m -b -p src\main\java -t . -c "mvn,clean,test" --timeout=600
+
+
+
 
 ## 💬 Citation
 
