@@ -169,5 +169,4 @@ This project uses a dual-license structure:
 If you reference this repository in a publication, please cite it as:
 
 Anonymous, "Semantic vs Structural Coverage," GitHub, 2025.
-Available at: https://github.com/anonymous/semantic-vs-structural-coverage
----
+Available at: https://github.com/TestSuiteEffectiveness/Semantic-vs-Structural-coverage
