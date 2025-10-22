@@ -28,14 +28,14 @@ The goal is to evaluate how well traditional structural metrics capture the fail
 
 ---
 
-### 🛦 Function Under Test
+### 🧮 Function Under Test
 
 * **Original function:** `FastMath.tanh()` from Apache Commons Math 3.6.1
 * **Modified version:** `FastMathAA.tanhA()` — introduces controlled divergences (throws exceptions) for certain inputs.
 
 ---
 
-###  Test Classes
+### 🧪 Test Classes
 
 `FastMathTest.java` contains two test functions:
 
@@ -50,11 +50,11 @@ The goal is to evaluate how well traditional structural metrics capture the fail
 **Test Suite Generation:**
 
 * Script: `A_GenerateRandomTestSuites.py`
-* Output: `SubsetTest.txt` — defines which inputs belong to each test class.
+* Output: `SubsetTestsT1_T20.txt` — defines which inputs belong to each test class.
 
 ---
 
-###  Coverage Analysis
+### 🧪 Coverage Analysis
 
 #### 1. Structural Coverage
 
@@ -67,9 +67,10 @@ The goal is to evaluate how well traditional structural metrics capture the fail
 
 **Output files:**
 
-* `code_coverage/Branch.txt`
-* `code_coverage/InstructionStat.txt`
-* `code_coverage/LineCoverage.txt` (from PiTest)
+* `Data/code_coverage/Branch.txt`
+* `Data/code_coverage/InstructionStat.txt`
+* `Data/code_coverage/Line.txt` (from PiTest)
+* `Data/code_coverage/RMS.txt`
 
 ---
 
@@ -87,7 +88,7 @@ The goal is to evaluate how well traditional structural metrics capture the fail
 
 **Output:**
 
-* `RMS.txt` = Killed / Total mutants per test class
+* `Data/code_coverage/RMS.txt` = Killed / Total mutants per test class
 
 ---
 
@@ -103,8 +104,8 @@ Failure coverage is computed for specifications **R4**, **R6**, and **R7 (rename
 
 **Outputs:**
 
-* `GraphsInputTotal_Partial_StrictInclusion/` (e.g., `PR4.txt`, `TR4.txt`, `PR6.txt`, `TR6.txt`, etc.)
-* `SemanticCoverageOutput/` (e.g., `Union_partial_R4.txt`, `Union_total_R4.txt`, etc.)
+* `Data/GraphsInputTotal_Partial_StrictInclusion/` (e.g., `PR4.txt`, `TR4.txt`, `PR6.txt`, `TR6.txt`, etc.)
+* `Data/SemanticCoverageOutput/` (e.g., `Union_partial_R4.txt`, `Union_total_R4.txt`, etc.)
 
 ---
 
@@ -138,15 +139,43 @@ semantic-vs-structural-coverage/
 │
 ├── Data/
 │   ├── code_coverage/
+│   │   ├── Branch.txt
+│   │   ├── InstructionStat.txt
+│   │   ├── Line.txt
+│   │   └── RMS.txt
+│   │
 │   ├── GraphsInputTotal_Partial_StrictInclusion/
+│   │   ├── PR4.txt
+│   │   ├── TR4.txt
+│   │   ├── PR6.txt
+│   │   ├── TR6.txt
+│   │   ├── PR7.txt
+│   │   └── TR7.txt
+│   │
 │   ├── Mutants_LittleDarwin/
+│   │   ├── M125.txt ... M248.txt
+│   │
 │   ├── SemanticCoverageOutput/
+│   │   ├── Union_partial_R4.txt ... Union_total_R7.txt
+│   │
 │   ├── Test_Classes/
+│   │   ├── FastMathTestT0.java ... FastMathTestT20.java
+│   │
 │   └── SubsetTestsT1_T20.txt
 │
 ├── Scripts/
+│   ├── A_GenerateRandomTestSuites.py ... H_Compute_Metrics.py
+│
 ├── Specification/
+│   ├── R0.txt
+│   ├── R4.txt
+│   ├── R6.txt
+│   └── R7.txt
+│
 ├── src/
+│   ├── main/java/org/apache/commons/math3/util/FastMathAA.java
+│   └── test/java/org/apache/commons/math3/util/FastMathTest.java
+│
 ├── Results.xlsx
 ├── strictprecision.xlsx
 ├── README.md
