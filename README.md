@@ -35,7 +35,7 @@ The goal is to evaluate how well traditional structural metrics capture the fail
 
 ---
 
-### 🤮 Test Classes
+###  Test Classes
 
 `FastMathTest.java` contains two test functions:
 
@@ -54,7 +54,7 @@ The goal is to evaluate how well traditional structural metrics capture the fail
 
 ---
 
-### 🤮 Coverage Analysis
+###  Coverage Analysis
 
 #### 1. Structural Coverage
 
